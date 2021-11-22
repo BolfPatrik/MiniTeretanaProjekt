@@ -1,5 +1,5 @@
 drop database if exists teretana1;
-create database teretana1;
+create database teretana1 character set utf8;
 use teretana1;
 
 create table blagajnik(
@@ -39,7 +39,8 @@ create table tecaj(
     vrijemekraja varchar(50),
     cijena decimal(18,2),
     trajanje int not null,
-    trener int
+    trener int,
+    polaznik int
 );
 
 create table trener(
@@ -61,6 +62,8 @@ alter table kartica add foreign key (trener) references trener(sifra);
 alter table kartica add foreign key (blagajnik) references blagajnik(sifra);
 
 alter table tecaj add foreign key (trener) references trener(sifra);
+alter table tecaj add foreign key (polaznik) references polaznik(sifra);
+
 
 
 
