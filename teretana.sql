@@ -2,23 +2,9 @@ drop database if exists teretana1;
 create database teretana1 character set utf8;
 use teretana1;
 
-create table blagajnik(
-    sifra int not null primary key auto_increment,
-    osoba int not null,
-    iban varchar(50),
-    placa varchar(50)
-);
-
 create table polaznik(
     sifra int not null primary key auto_increment,
     osoba int not null
-);
-
-create table osoba(
-    sifra int not null primary key auto_increment,
-    ime varchar(50) not null,
-    prezime varchar(50) not null,
-    oib varchar(11)
 );
 
 create table kartica(
