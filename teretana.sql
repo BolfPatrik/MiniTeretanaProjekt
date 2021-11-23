@@ -4,12 +4,13 @@ use teretana1;
 
 create table polaznik(
     sifra int not null primary key auto_increment,
-    osoba int not null
+    ime varchar(50),
+    prezime varchar(50),
+    oib varchar(50)
 );
 
 create table kartica(
     sifra int not null primary key auto_increment,
-    osoba int not null,
     brojkartice varchar(50),
     adresa varchar(50),
     telefonteretane varchar(50),
@@ -31,21 +32,16 @@ create table tecaj(
 
 create table trener(
     sifra int not null primary key auto_increment,
-    osoba int not null,
+    ime varchar(50),
+    prezime varchar(50),
+    oib varchar(50),
     iban varchar(50),
     placa varchar(50),
     kvalificiran boolean
 );
 
-alter table blagajnik add foreign key (osoba) references osoba(sifra);
-
-alter table trener add foreign key (osoba) references osoba(sifra);
-
-alter table polaznik add foreign key (osoba) references osoba(sifra);
-
 alter table kartica add foreign key (polaznik) references polaznik(sifra);
 alter table kartica add foreign key (trener) references trener(sifra);
-alter table kartica add foreign key (blagajnik) references blagajnik(sifra);
 
 alter table tecaj add foreign key (trener) references trener(sifra);
 alter table tecaj add foreign key (polaznik) references polaznik(sifra);
