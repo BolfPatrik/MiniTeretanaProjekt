@@ -15,8 +15,7 @@ create table kartica(
     adresa varchar(50),
     telefonteretane varchar(50),
     polaznik int,
-    trener int,
-    blagajnik int
+    trener int
 );
 
 create table tecaj(
@@ -36,8 +35,7 @@ create table trener(
     prezime varchar(50),
     oib varchar(50),
     iban varchar(50),
-    placa varchar(50),
-    kvalificiran boolean
+    placa varchar(50)
 );
 
 alter table kartica add foreign key (polaznik) references polaznik(sifra);
