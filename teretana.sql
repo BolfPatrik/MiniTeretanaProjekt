@@ -41,8 +41,8 @@ create table trener(
 alter table kartica add foreign key (polaznik) references polaznik(sifra);
 alter table kartica add foreign key (trener) references trener(sifra);
 
-alter table tecaj add foreign key (trener) references trener(sifra);
-alter table tecaj add foreign key (polaznik) references polaznik(sifra);
+alter table trening add foreign key (trener) references trener(sifra);
+alter table trening add foreign key (polaznik) references polaznik(sifra);
 
 
 
