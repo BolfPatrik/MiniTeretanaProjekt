@@ -18,7 +18,7 @@ create table kartica(
     trener int
 );
 
-create table tecaj(
+create table trening(
     sifra int not null primary key auto_increment,
     naziv varchar(50),
     vrijemepocetka varchar(50),
