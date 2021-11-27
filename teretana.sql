@@ -6,7 +6,7 @@ create table polaznik(
     sifra int not null primary key auto_increment,
     ime varchar(50),
     prezime varchar(50),
-    oib varchar(50)
+    oib varchar(11)
 );
 
 create table kartica(
@@ -33,7 +33,7 @@ create table trener(
     sifra int not null primary key auto_increment,
     ime varchar(50),
     prezime varchar(50),
-    oib varchar(50),
+    oib varchar(11),
     iban varchar(50),
     placa varchar(50)
 );
