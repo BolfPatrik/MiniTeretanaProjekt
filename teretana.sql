@@ -4,8 +4,8 @@ use teretana1;
 
 create table polaznik(
     sifra int not null primary key auto_increment,
-    ime varchar(50),
-    prezime varchar(50),
+    ime varchar(50) not null,
+    prezime varchar(50) not null,
     oib varchar(11),
     brojkartice varchar(50)
     
@@ -13,19 +13,18 @@ create table polaznik(
 
 create table trening(
     sifra int not null primary key auto_increment,
-    naziv varchar(50),
+    naziv varchar(50) not null,
     vrijemepocetka varchar(50),
     vrijemekraja varchar(50),
     cijena decimal(18,2),
-    trajanje int not null,
     trener int,
     polaznik int
 );
 
 create table trener(
     sifra int not null primary key auto_increment,
-    ime varchar(50),
-    prezime varchar(50),
+    ime varchar(50) not null,
+    prezime varchar(50) not null,
     oib varchar(11),
     iban varchar(50),
     placa varchar(50),
