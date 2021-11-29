@@ -31,17 +31,17 @@ create table trener(
     brojkartice varchar(50)
 );
 
-create table clan(
-    polaznik int not null,
-    trener int not null
+create table trener_polaznik(
+    trener int not null,
+    polaznik int not null
 );  
 
 
 alter table trening add foreign key (trener) references trener(sifra);
 alter table trening add foreign key (polaznik) references polaznik(sifra);
 
-alter table clan add foreign key (polaznik) references polaznik(sifra);
-alter table clan add foreign key (trener) references trener(sifra);
+alter table trener_polaznik add foreign key (polaznik) references polaznik(sifra);
+alter table trener_polaznik add foreign key (trener) references trener(sifra);
 
 
 
