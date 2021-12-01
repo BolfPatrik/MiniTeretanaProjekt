@@ -62,8 +62,8 @@ values (null,'Ivan','Kunštek','86269030155','0571703'),
        (null,'Jasna','Nikolić','44345718221','6970105'),
        (null,'August','Šenoa','05487807876','5228014'),
        (null,'Viktoria','Faust','26644209513','9520605'),
-       (null,'Petar','Vraz','47396457649','4995425');
-       (null,'Janko','Mraz','10782494847','4068389');
+       (null,'Petar','Vraz','47396457649','4995425'),
+       (null,'Janko','Mraz','10782494847','4068389'),
        (null,'Marko','Marulić','52973424348','4574198'),
        (null,'Ante','Kovačić','42764608845','2682172'),
        (null,'Milan','Kordić','38773683342','5259559'),
@@ -74,23 +74,75 @@ values (null,'Ivan','Kunštek','86269030155','0571703'),
        (null,'Davor','Slama','71531128639','1245806'),
        (null,'Tomislav','Ladan','75233717763','1017875');
 
-
-insert into trening (sifra,naziv,vrijemepocetka,vrijemekraja,cijena)
-values (null, 'Judo','17:00','19:00', '150kn/mjesec'),
-       (null, 'Judo','17:00','19:00', '150kn/mjesec'),
-       (null, 'Judo','17:00','19:00', '150kn/mjesec'),
-       (null, 'Judo','17:00','19:00', '150kn/mjesec'),
-       (null, 'Judo','17:00','19:00', '150kn/mjesec');
-
-
 insert into trener (sifra,ime,prezime,oib,iban,placa,brojkartice)
 values (null,'Tomislav','Ugrešić','30187507814','HR5023400097991464415','6299.99kn','2398712'),
        (null,'Miroslav','Božić','69819906575','HR7123600008989455662','6357.99kn','5717241'),
        (null,'Andrija','Bošnjak','88083840806','HR1724840088476862635','6154.59kn','8898820'),
-       (null,'Jurica','Zadravec','24910333513','HR2025000098888765614','6759.99kn','8054143'),
-       (null,'Lidija','Rukavina','10271194602','HR6324840084757352575','6659.49kn','4814385');
+       (null,'Lidija','Rukavina','10271194602','HR6324840084757352575','6659.49kn','4814385'),
+       (null,'Jurica','Zadravec','24910333513','HR2025000098888765614','6759.99kn','8054143');
 
 
+insert into trening (sifra,trener,polaznik,naziv,vrijemepocetka,vrijemekraja,cijena)
+values (null,1,1,'Judo','14,30h','15,30h',150),
+       (null,1,2,'Judo','14,30h','15,30h',150),
+       (null,1,3,'Judo','14,30h','15,30h',150),
+       (null,1,4,'Judo','14,30h','15,30h',150),
+       (null,1,5,'Judo','14,30h','15,30h',150),
+       (null,1,6,'Judo','14,30h','15,30h',150),
+       (null,2,7,'Boxing','16,00h','17,00h',160),
+       (null,2,8,'Boxing','16,00h','17,00h',160),
+       (null,2,9,'Boxing','16,00h','17,00h',160),
+       (null,2,10,'Boxing','16,00h','17,00h',160),
+       (null,2,11,'Boxing','16,00h','17,00h',160),
+       (null,2,12,'Boxing','16,00h','17,00h',160),
+       (null,3,13,'Kickboxing','17,30h','18,30h',160),
+       (null,3,14,'Kickboxing','17,30h','18,30h',160),
+       (null,3,15,'Kickboxing','17,30h','18,30h',160),
+       (null,3,16,'Kickboxing','17,30h','18,30h',160),
+       (null,3,17,'Kickboxing','17,30h','18,30h',160),
+       (null,3,18,'Kickboxing','17,30h','18,30h',160),
+       (null,4,19,'Joga','19,00h','20,00h',130),
+       (null,4,20,'Joga','19,00h','20,00h',130),
+       (null,4,21,'Joga','19,00h','20,00h',130),
+       (null,4,22,'Joga','19,00h','20,00h',130),
+       (null,4,23,'Joga','19,00h','20,00h',130),
+       (null,4,24,'Joga','19,00h','20,00h',130),
+       (null,5,25,'Karate','20,30h','21,30h',140),
+       (null,5,26,'Karate','20,30h','21,30h',140),
+       (null,5,27,'Karate','20,30h','21,30h',140),
+       (null,5,28,'Karate','20,30h','21,30h',140),
+       (null,5,29,'Karate','20,30h','21,30h',140),
+       (null,5,30,'Karate','20,30h','21,30h',140);
 
+
+insert into trener_polaznik (trener,polaznik) values 
+(1,2),
+(1,3),
+(1,4),
+(1,5),
+(1,6),
+(2,7),
+(2,8),
+(2,9),
+(2,10),
+(2,11),
+(2,12),
+(3,13),
+(3,14),
+(3,15),
+(3,16),
+(3,17),
+(3,18),
+(4,19),
+(4,21),
+(4,22),
+(4,23),
+(4,24),
+(5,25),
+(5,26),
+(5,27),
+(5,28),
+(5,29),
+(5,30);
 
 
