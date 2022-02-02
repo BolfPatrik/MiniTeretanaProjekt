@@ -29,7 +29,6 @@ create table trener(
     placa varchar(50),
     brojkartice varchar(7)
 );
-
 create table trener_polaznik(
     trener int not null,
     polaznik int not null
