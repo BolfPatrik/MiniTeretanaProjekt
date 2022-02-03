@@ -10,12 +10,15 @@ public class Trener extends Entitet{
 	private String iban;
 	private String placa;
 	private String brojkartice;
-	List<Polaznik> polaznik;
-	public List<Polaznik> getPolaznik() {
-		return polaznik;
+	private List<Polaznik> polaznici;
+	
+	
+	
+	public List<Polaznik> getPolaznici() {
+		return polaznici;
 	}
-	public void setPolaznik(List<Polaznik> polaznik) {
-		this.polaznik = polaznik;
+	public void setPolaznici(List<Polaznik> polaznici) {
+		this.polaznici = polaznici;
 	}
 	public String getIme() {
 		return ime;
