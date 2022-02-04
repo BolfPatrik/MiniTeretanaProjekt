@@ -26,9 +26,10 @@ create table trener(
     prezime varchar(50) not null,
     oib varchar(11),
     iban varchar(50),
-    placa varchar(50),
+    placa decimal(18,2),
     brojkartice varchar(7)
 );
+
 create table trener_polaznik(
     trener int not null,
     polaznik int not null
@@ -120,5 +121,6 @@ insert into trener_polaznik (trener,polaznik) values
 (5,28),
 (5,29),
 (5,30);
+
 
 
