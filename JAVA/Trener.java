@@ -1,5 +1,6 @@
 package moj.modul;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 public class Trener extends Entitet{
@@ -8,7 +9,7 @@ public class Trener extends Entitet{
 	private String prezime;
 	private String oib;
 	private String iban;
-	private String placa;
+	private BigDecimal placa;
 	private String brojkartice;
 	private List<Polaznik> polaznici;
 	
@@ -44,10 +45,11 @@ public class Trener extends Entitet{
 	public void setIban(String iban) {
 		this.iban = iban;
 	}
-	public String getPlaca() {
+	
+	public BigDecimal getPlaca() {
 		return placa;
 	}
-	public void setPlaca(String placa) {
+	public void setPlaca(BigDecimal placa) {
 		this.placa = placa;
 	}
 	public String getBrojkartice() {
