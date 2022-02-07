@@ -12,15 +12,6 @@ public class Trener extends Entitet{
 	private BigDecimal placa;
 	private String brojkartice;
 	private List<Polaznik> polaznici;
-	
-	
-	
-	public List<Polaznik> getPolaznici() {
-		return polaznici;
-	}
-	public void setPolaznici(List<Polaznik> polaznici) {
-		this.polaznici = polaznici;
-	}
 	public String getIme() {
 		return ime;
 	}
@@ -45,7 +36,6 @@ public class Trener extends Entitet{
 	public void setIban(String iban) {
 		this.iban = iban;
 	}
-	
 	public BigDecimal getPlaca() {
 		return placa;
 	}
@@ -58,6 +48,20 @@ public class Trener extends Entitet{
 	public void setBrojkartice(String brojkartice) {
 		this.brojkartice = brojkartice;
 	}
+	public List<Polaznik> getPolaznici() {
+		return polaznici;
+	}
+	public void setPolaznici(List<Polaznik> polaznici) {
+		this.polaznici = polaznici;
+	}
+	
+	@Override
+	public String toString() {
+		return ime + " " + prezime + " ";
+	}
+	
+	
+	
 	
 	
 }
