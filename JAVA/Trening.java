@@ -47,6 +47,10 @@ public class Trening extends Entitet{
 		this.polaznik = polaznik;
 	}
 	
+	@Override
+	public String toString() {
+		return naziv;
+	}
 	
 	
 }
