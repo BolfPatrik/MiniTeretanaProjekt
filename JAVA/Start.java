@@ -39,11 +39,75 @@ public class Start {
 	}
 
 	private void treningIzbornik() {
-		
+		System.out.println("1. Pregled treninga");
+		System.out.println("2. Unos novog treninga");
+		System.out.println("3. Promjena treninga");
+		System.out.println("4. Brisanje treninga");
+		System.out.println("5. Povratak na glavni izbornik");
+		switch (Unos.unesiInt(ulaz, "Odaberi", 1, 5)) {
+		case 1 -> treningPregled();
+		case 2 -> treningUnos();
+		case 3 -> treningPromjena();
+		case 4 -> treningBrisanje();
+		case 5 -> treningIzbornik();
+		}
+	}
+
+	private void treningBrisanje() {
+	}
+
+	private void treningPromjena() {
+	
+	}
+
+	private void treningUnos() {
+	
+	}
+
+	private void treningPregled() {
+	
 	}
 
 	private void polaznikIzbornik() {
+		System.out.println("1. Pregled polaznika");
+		System.out.println("2. Unos novog polaznika");
+		System.out.println("3. Promjena polaznika");
+		System.out.println("4. Brisanje polaznika");
+		System.out.println("5. Povratak na glavni izbornik");
+		switch (Unos.unesiInt(ulaz, "Odaberi", 1, 5)) {
+		case 1 -> polaznikPregled();
+		case 2 -> polaznikUnos();
+		case 3 -> polaznikPromjena();
+		case 4 -> polaznikBrisanje();
+		case 5 -> glavniIzbornik();
+	}
+	}
+	private void polaznikBrisanje() {
+		polaznikPregled();
+		polaznici.remove(Unos.unesiInt(ulaz, "Odaberi redni broj polaznika kojeg želiš maknuti")-1);
+		polaznikIzbornik();
+	}
+
+	private void polaznikPromjena() {
+		polaznikPregled();
 		
+		polaznikIzbornik();
+	}
+
+	private void polaznikPregled() {
+		for(Polaznik p:polaznici) {
+			System.out.println(p);
+		}
+		polaznikIzbornik();
+		
+	}
+
+	private void polaznikUnos() {
+	Polaznik p = new Polaznik();
+	p.setIme(Unos.unesiString(ulaz, "Unesi ime"));
+	p.setPrezime(Unos.unesiString(ulaz, "Unesi prezime"));
+	polaznici.add(p);
+	polaznikIzbornik();
 	}
 
 	private void trenerIzbornik() {
@@ -62,15 +126,23 @@ public class Start {
 	}
 
 	private void trenerBrisanje() {
-		
+		trenerPregled();
+		treneri.remove(Unos.unesiInt(ulaz, "Odaberi redni broj trenera kojeg želiš maknuti")-1);
+		trenerIzbornik();
 	}
 
 	private void trenerPromjena() {
-		
+		trenerPregled();
+		 
+		trenerIzbornik();
 	}
 
 	private void trenerUnos() {
-		
+		Trener t = new Trener();
+		t.setIme(Unos.unesiString(ulaz, "Unesi ime"));
+		t.setPrezime(Unos.unesiString(ulaz, "Unesi prezime"));
+		treneri.add(t);
+		trenerIzbornik();
 	}
 
 	private void trenerPregled() {
