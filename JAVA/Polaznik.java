@@ -31,6 +31,9 @@ public class Polaznik extends Entitet{
 		this.brojkartice = brojkartice;
 	}
 	
-	
+@Override
+public String toString() {
+	return ime + " " + prezime;
+}	
 
 }
