@@ -5,19 +5,33 @@ import javax.persistence.Id;
 
 
 @Entity
-public class Polaznik extends Entitet{
+public class Polaznik {
 	
         @Id
-	private String ime;
+        private int sifra;
+        private String ime;
 	private String prezime;
 	private String oib;
 	private String brojkartice;
-	public String getIme() {
-		return ime;
-	}
-	public void setIme(String ime) {
-		this.ime = ime;
-	}
+        
+         public int getSifra() {
+        return sifra;
+    }
+
+    public void setSifra(int sifra) {
+        this.sifra = sifra;
+    }
+
+    public String getIme() {
+        return ime;
+    }
+
+    public void setIme(String ime) {
+        this.ime = ime;
+    }
+    
+    
+	
 	public String getPrezime() {
 		return prezime;
 	}
@@ -37,9 +51,6 @@ public class Polaznik extends Entitet{
 		this.brojkartice = brojkartice;
 	}
 	
-@Override
-public String toString() {
-	return ime + " " + prezime;
-}	
+
 
 }
