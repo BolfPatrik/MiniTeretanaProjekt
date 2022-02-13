@@ -11,8 +11,11 @@ import moj.modul.Trening;
 public class Start {
 	
 	private List<Trener> treneri;
+	private Trener trener;
 	private List<Polaznik> polaznici;
+	private Polaznik polaznik;
 	private List<Trening> treninzi;
+	private Trening trening;
 	private Scanner ulaz;
 	
 	public Start() {
@@ -49,20 +52,20 @@ public class Start {
 		case 2 -> treningUnos();
 		case 3 -> treningPromjena();
 		case 4 -> treningBrisanje();
-		case 5 -> treningIzbornik();
+		case 5 -> glavniIzbornik();
 		}
 	}
 
 	private void treningBrisanje() {
-		treninzi.remove(Unos.unesiInt(ulaz, "Odaberi redni broj polaznika kojeg želiš maknuti")-1);
+		treninzi.remove(Unos.unesiInt(ulaz, "Odaberi redni broj treninga kojeg želiš maknuti")-1);
 		treningIzbornik();
 	}
 
 	private void treningPromjena() {
-        treningPregled();
-		
+		int i = Unos.unesiInt(ulaz, "Unesi redni broj treninga kojeg želiš mijenjati");
+		trening = treninzi.get(i-1);
+		trening.setNaziv(Unos.unesiString(ulaz, "Promjeni naziv (" + trening.getNaziv() + ")"));
 		treningIzbornik();
-	
 	}
 
 	private void treningUnos() {
@@ -100,8 +103,10 @@ public class Start {
 	}
 
 	private void polaznikPromjena() {
-		polaznikPregled();
-		
+		int i = Unos.unesiInt(ulaz, "Unesi redni broj polaznika kojeg želiš mijenjati");
+		polaznik = polaznici.get(i-1);
+		polaznik.setIme(Unos.unesiString(ulaz, "Promjeni ime (" + polaznik.getIme() + ")"));
+		polaznik.setPrezime(Unos.unesiString(ulaz, "Promjeni prezime (" + polaznik.getPrezime() + ")"));
 		polaznikIzbornik();
 	}
 
@@ -143,8 +148,12 @@ public class Start {
 	}
 
 	private void trenerPromjena() {
-		trenerPregled();
+		int i = Unos.unesiInt(ulaz, "Unesi redni broj trenera kojeg želiš mijenjati");
+		trener = treneri.get(i-1);
+		trener.setIme(Unos.unesiString(ulaz, "Promjeni ime (" + trener.getIme() + ")"));
+		trener.setPrezime(Unos.unesiString(ulaz, "Promjeni prezime (" + trener.getPrezime() + ")"));
 		trenerIzbornik();
+		
 	}
 
 	private void trenerUnos() {
