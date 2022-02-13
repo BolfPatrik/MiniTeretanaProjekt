@@ -54,18 +54,30 @@ public class Start {
 	}
 
 	private void treningBrisanje() {
+		treninzi.remove(Unos.unesiInt(ulaz, "Odaberi redni broj polaznika kojeg želiš maknuti")-1);
+		treningIzbornik();
 	}
 
 	private void treningPromjena() {
+        treningPregled();
+		
+		treningIzbornik();
 	
 	}
 
 	private void treningUnos() {
-	
+		Trening t = new Trening();
+		t.setNaziv(Unos.unesiString(ulaz, "Unesi naziv"));
+		treninzi.add(t);
+		treningIzbornik();
 	}
 
 	private void treningPregled() {
-	
+		for(Trening t:treninzi) {
+			System.out.println(t);
+		}
+		treningIzbornik();
+		
 	}
 
 	private void polaznikIzbornik() {
@@ -83,7 +95,6 @@ public class Start {
 	}
 	}
 	private void polaznikBrisanje() {
-		polaznikPregled();
 		polaznici.remove(Unos.unesiInt(ulaz, "Odaberi redni broj polaznika kojeg želiš maknuti")-1);
 		polaznikIzbornik();
 	}
@@ -126,14 +137,13 @@ public class Start {
 	}
 
 	private void trenerBrisanje() {
-		trenerPregled();
 		treneri.remove(Unos.unesiInt(ulaz, "Odaberi redni broj trenera kojeg želiš maknuti")-1);
 		trenerIzbornik();
+		
 	}
 
 	private void trenerPromjena() {
 		trenerPregled();
-		 
 		trenerIzbornik();
 	}
 
