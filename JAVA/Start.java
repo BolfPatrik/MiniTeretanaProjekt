@@ -71,6 +71,9 @@ public class Start {
 	private void treningUnos() {
 		Trening t = new Trening();
 		t.setNaziv(Unos.unesiString(ulaz, "Unesi naziv"));
+		t.setVrijemepocetka(Unos.unesiString(ulaz, "Unesi vrijeme pocetka"));
+		t.setVrijemekraja(Unos.unesiString(ulaz, "Unesi vrijeme kraja"));
+		t.setCijena(Unos.unesiBigDecimal(ulaz, "Unesi cijenu"));
 		treninzi.add(t);
 		treningIzbornik();
 	}
@@ -122,6 +125,8 @@ public class Start {
 	Polaznik p = new Polaznik();
 	p.setIme(Unos.unesiString(ulaz, "Unesi ime"));
 	p.setPrezime(Unos.unesiString(ulaz, "Unesi prezime"));
+	p.setOib(Unos.unesiString(ulaz, "Unesi Oib"));
+	p.setBrojkartice(Unos.unesiString(ulaz, "Unesi broj kartice"));
 	polaznici.add(p);
 	polaznikIzbornik();
 	}
@@ -160,6 +165,10 @@ public class Start {
 		Trener t = new Trener();
 		t.setIme(Unos.unesiString(ulaz, "Unesi ime"));
 		t.setPrezime(Unos.unesiString(ulaz, "Unesi prezime"));
+		t.setOib(Unos.unesiString(ulaz, "Unesi oib"));
+		t.setIban(Unos.unesiString(ulaz, "Unesi iban"));
+		t.setPlaca(Unos.unesiBigDecimal(ulaz, "Unesi plaću"));
+		t.setBrojkartice(Unos.unesiString(ulaz, "Unesi broj kartice"));
 		treneri.add(t);
 		trenerIzbornik();
 	}
