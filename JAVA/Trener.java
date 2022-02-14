@@ -57,7 +57,7 @@ public class Trener extends Entitet{
 	
 	@Override
 	public String toString() {
-		return ime + " " + prezime + " ";
+		return ime + " " + prezime + " " + "OIB: " + oib + " " +  "Iban: " + iban + " " + "Plaća: " + placa + " " + "Broj kartice: " + brojkartice;
 	}
 	
 	
@@ -65,3 +65,4 @@ public class Trener extends Entitet{
 	
 	
 }
+
