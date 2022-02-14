@@ -49,7 +49,7 @@ public class Trening extends Entitet{
 	
 	@Override
 	public String toString() {
-		return naziv;
+		return naziv + " " + "Vrijeme početka: " + vrijemepocetka + " " + "Vrijeme kraja: " + vrijemekraja + " " + "Cijena:" + cijena;
 	}
 	
 	
