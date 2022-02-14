@@ -33,7 +33,8 @@ public class Polaznik extends Entitet{
 	
 @Override
 public String toString() {
-	return ime + " " + prezime;
+	return ime + " " + prezime + " " + "OIB: " + oib + " " + "Broj kartice: " + brojkartice;
 }	
 
 }
+
