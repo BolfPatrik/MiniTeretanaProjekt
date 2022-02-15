@@ -3,30 +3,21 @@ package teretana.vjezbanje;
 import java.math.BigDecimal;
 import java.util.List;
 import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
 @Entity
-public class Trener {
-
-        @Id
-        private int sifra;    
+public class Trener extends Entitet{
+   
 	private String ime;
 	private String prezime;
 	private String oib;
 	private String iban;
 	private BigDecimal placa;
 	private String brojkartice;
+        
+        @ManyToMany
+        private List<Polaznik> polaznici;
 
-    public int getSifra() {
-        return sifra;
-    }
-
-    public void setSifra(int sifra) {
-        this.sifra = sifra;
-    }
-        
-        
-        
 	public String getIme() {
 		return ime;
 	}
@@ -63,6 +54,14 @@ public class Trener {
 	public void setBrojkartice(String brojkartice) {
 		this.brojkartice = brojkartice;
 	}
+
+    public List<Polaznik> getPolaznici() {
+        return polaznici;
+    }
+
+    public void setPolaznici(List<Polaznik> polaznici) {
+        this.polaznici = polaznici;
+    }
 	
 	
 	
@@ -70,3 +69,4 @@ public class Trener {
 	
 	
 }
+
