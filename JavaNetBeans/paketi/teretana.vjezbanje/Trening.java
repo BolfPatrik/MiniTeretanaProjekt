@@ -5,33 +5,23 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
 
 
 @Entity
-public class Trening {
+public class Trening extends Entitet{
 
-    
-     @Id
-     @GeneratedValue(strategy = GenerationType.IDENTITY)
-        private int sifra;
-        
-     @Column(columnDefinition = "varchar(50)")
 	private String naziv;
 	private String vrijemepocetka;
 	private String vrijemekraja;
 	private BigDecimal cijena;
+        @ManyToOne
+        private Polaznik polaznik;
+        
+        @ManyToOne
+        private Trener Trener;
 
-    public int getSifra() {
-        return sifra;
-    }
-
-    public void setSifra(int sifra) {
-        this.sifra = sifra;
-    }
-        
-        
-        
 	public String getNaziv() {
 		return naziv;
 	}
@@ -56,6 +46,22 @@ public class Trening {
 	public void setCijena(BigDecimal cijena) {
 		this.cijena = cijena;
 	}
+
+    public Polaznik getPolaznik() {
+        return polaznik;
+    }
+
+    public void setPolaznik(Polaznik polaznik) {
+        this.polaznik = polaznik;
+    }
+
+    public Trener getTrener() {
+        return Trener;
+    }
+
+    public void setTrener(Trener Trener) {
+        this.Trener = Trener;
+    }
 	
 	
 	
