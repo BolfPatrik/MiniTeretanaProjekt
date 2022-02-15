@@ -1,26 +1,17 @@
 package teretana.vjezbanje;
 
 import javax.persistence.Entity;
-import javax.persistence.Id;
 
 
 @Entity
-public class Polaznik {
+public class Polaznik extends Entitet{
 	
-        @Id
-        private int sifra;
+    
         private String ime;
 	private String prezime;
 	private String oib;
 	private String brojkartice;
         
-         public int getSifra() {
-        return sifra;
-    }
-
-    public void setSifra(int sifra) {
-        this.sifra = sifra;
-    }
 
     public String getIme() {
         return ime;
@@ -28,10 +19,8 @@ public class Polaznik {
 
     public void setIme(String ime) {
         this.ime = ime;
-    }
+    }	
     
-    
-	
 	public String getPrezime() {
 		return prezime;
 	}
@@ -54,3 +43,4 @@ public class Polaznik {
 
 
 }
+
