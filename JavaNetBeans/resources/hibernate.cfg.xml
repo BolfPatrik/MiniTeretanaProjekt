@@ -5,7 +5,7 @@
     <session-factory>
         <!-- JDBC Database connection settings -->
         <property name="connection.driver_class">org.mariadb.jdbc.Driver</property>
-        <property name="connection.url">jdbc:mariadb://localhost:3306/teretana1hib?useSSL=false</property>
+        <property name="connection.url">jdbc:mariadb://localhost:3306/teretana3hib?useSSL=false</property>
         <property name="connection.username">edunova</property>
         <property name="connection.password">edunova</property>
         <!-- JDBC connection pool settings ... using built-in test pool -->
@@ -31,5 +31,8 @@
         
         
         <mapping class="teretana.vjezbanje.Polaznik" />
+        <mapping class="teretana.vjezbanje.Trener" />
+        <mapping class="teretana.vjezbanje.Trening" />
+        
     </session-factory>
 </hibernate-configuration>
