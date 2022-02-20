@@ -1,15 +1,19 @@
 package teretana.vjezbanje;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 
 
 @Entity
 public class Polaznik extends Entitet{
 	
-    
+       @Column(columnDefinition = "varchar(50) NOT NULL")
         private String ime;
+       @Column(columnDefinition = "varchar(50) NOT NULL")
 	private String prezime;
+        @Column(columnDefinition = "varchar(11)")
 	private String oib;
+        @Column(columnDefinition = "varchar(7)")
 	private String brojkartice;
         
 
@@ -43,4 +47,3 @@ public class Polaznik extends Entitet{
 
 
 }
-
