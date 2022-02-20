@@ -2,17 +2,23 @@ package teretana.vjezbanje;
 
 import java.math.BigDecimal;
 import java.util.List;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 
 @Entity
 public class Trener extends Entitet{
-   
+        @Column(columnDefinition = "varchar(50) NOT NULL")
 	private String ime;
+        @Column(columnDefinition = "varchar(50) NOT NULL")
 	private String prezime;
+        @Column(columnDefinition = "varchar(11)")
 	private String oib;
+        @Column(columnDefinition = "varchar(50)")
 	private String iban;
+        @Column(columnDefinition = "decimal(18,2)")
 	private BigDecimal placa;
+        @Column(columnDefinition = "varchar(7)")
 	private String brojkartice;
         
         @ManyToMany
@@ -69,4 +75,5 @@ public class Trener extends Entitet{
 	
 	
 }
+
 
